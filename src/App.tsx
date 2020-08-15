@@ -1,11 +1,19 @@
-import React from 'react';
+import * as React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { LocationMap } from './LocationMap';
+
+const location = {
+    address: 'Auckland',
+    lat: -36.84846,
+    lng: 174.763332,
+};
+const zoomLevel = 11;
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
@@ -18,7 +26,13 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
+      <section>
+        <LocationMap
+            location={location}
+            zoomLevel={zoomLevel}>
+        </LocationMap>
+      </section>
     </div>
   );
 }
